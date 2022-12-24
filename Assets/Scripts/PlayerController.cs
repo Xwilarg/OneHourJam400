@@ -59,7 +59,7 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
-                _timer.text = $"{(int)(_timeLeft / 10)}:{Pad((int)(_timeLeft % 10))}";
+                _timer.text = $"{(int)(_timeLeft / 60)}:{Pad((int)(_timeLeft % 60))}";
             }
         }
     }
