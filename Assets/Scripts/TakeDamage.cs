@@ -10,7 +10,10 @@ public class TakeDamage : MonoBehaviour
     {
         "Stop that!",
         "Outch!",
-        "I will call security!"
+        "I will call security!",
+        "That's not a way to behave!",
+        "What are you doing!?",
+        "That's disrespectful!"
     };
 
     private void Awake()
