@@ -52,6 +52,8 @@ public class PlayerController : MonoBehaviour
             _timeLeft -= Time.deltaTime;
             if (_timeLeft < 0f)
             {
+                _timer.gameObject.SetActive(false);
+                _secText.text = "Security took you out!";
                 Destroy(gameObject);
                 // GAMEOVER
             }
