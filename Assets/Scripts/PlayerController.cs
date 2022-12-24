@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
     public TMP_Text _timer;
     public TMP_Text _bounce;
     private bool _timerOn = false;
-    private float _timeLeft = 10f;
+    private float _timeLeft = 30f;
     private int _bCount = 0;
 
     public IEnumerator Reload()
