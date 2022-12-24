@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour
 
     private bool _canMove = false;
 
+    private bool _isMoving = false;
+
     public IEnumerator Reload()
     {
         _canMove = false;
@@ -30,11 +32,12 @@ public class PlayerController : MonoBehaviour
 
     public void Move(InputAction.CallbackContext value)
     {
-        if (value.performed && _canMove)
+        var mov = value.ReadValue<Vector2>();
+        if (_canMove && !_isMoving)
         {
-            var mov = value.ReadValue<Vector2>();
             _rb.velocity = Vector2.zero;
             _rb.AddForce(mov.normalized * 10f, ForceMode2D.Impulse);
         }
+        _isMoving = mov.x != 0f || mov.y != 0f;
     }
 }
